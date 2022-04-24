@@ -1,0 +1,20 @@
+{
+    "bridge": {
+        "module_globals": {
+            "bridge_set_static_mac_from_port": "no",
+            "mode": "active-backup",
+            "miimon": "100",
+            "fail_over_mac": "active"
+        }
+    },
+    "dhcp": {
+        "defaults": {
+            "dhcp-wait": "no"
+        },
+        "iface_defaults": {
+            "eth0": {
+                "dhcp6-duid": "LL"
+            }
+        }
+    }
+}
