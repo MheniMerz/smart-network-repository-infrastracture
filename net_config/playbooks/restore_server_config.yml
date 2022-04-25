@@ -1,0 +1,72 @@
+---
+- hosts: server
+  become: true
+  gather_facts: false
+  tasks:
+  - name: install ifupdown
+    apt:
+      name: ifupdown
+      state: present
+      update_cache: true
+
+  - name: Add bonding module
+    modprobe:
+      name: bonding
+      state: present
+
+  - name: Add ifenslave
+    apt:
+      name: ifenslave
+      state: present
+
+  - name: Remove netplan
+    apt:
+      name: netplan.io
+      state: absent
+
+  - name: Install FRR key
+    apt_key:
+      url: https://deb.frrouting.org/frr/keys.asc
+      state: present
+
+  - name: Add FRR apt repository
+    apt_repository:
+      repo: deb https://deb.frrouting.org/frr bionic frr-stable
+      state: present
+
+  - name: Install FRR
+    apt:
+      name:
+        - frr
+        - frr-pythontools
+      update_cache: yes
+
+  - name: Copy over interfaces template
+    copy: src=./backup_files/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
+    notify: reboot server
+
+  - name: copy init script to target host
+    copy: src=./backup_files/{{inventory_hostname}}/init.sh dest=/root/init.sh
+
+  - name: run init script
+    command: bash /root/init.sh
+
+  - name: Restore FRR daemons
+    copy: src=./backup_files/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
+    notify: restart frr
+
+  - name: Restore FRR configs
+    copy: src=./backup_files/{{inventory_hostname}}/frr.conf dest=/etc/frr/frr.conf
+    notify: restart frr
+
+
+  handlers:
+  - name: reboot server
+    reboot:
+      reboot_timeout: 1200
+      test_command: pwd
+
+  - name: restart frr
+    service:
+      name: frr
+      state: restarted
