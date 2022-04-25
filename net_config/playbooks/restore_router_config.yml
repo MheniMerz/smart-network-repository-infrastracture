@@ -7,7 +7,7 @@
   gather_facts: false
   tasks:
   - name: Restore config_db
-    copy: src=./backup_files/{{inventory_hostname}}/config_db.json dest=/etc/sonic/config_db.json
+    copy: src=./configs/{{inventory_hostname}}/config_db.json dest=/etc/sonic/config_db.json
     notify: reload sonic config
 
   - name: Set eth[1-20] MTU to 9238
@@ -42,7 +42,7 @@
   gather_facts: false
   tasks:
   - name: copy mac_address_changer_script to target host 
-    copy: src=./backup_files/{{inventory_hostname}}/set_mac_addresses.sh dest=/root/set_mac_addresses.sh
+    copy: src=./configs/{{inventory_hostname}}/set_mac_addresses.sh dest=/root/set_mac_addresses.sh
   
   - name: set mac addresses 
     command: bash /root/set_mac_addresses.sh

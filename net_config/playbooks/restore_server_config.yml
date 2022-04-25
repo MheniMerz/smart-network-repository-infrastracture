@@ -42,21 +42,21 @@
       update_cache: yes
 
   - name: Copy over interfaces template
-    copy: src=./backup_files/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
+    copy: src=./configs/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
     notify: reboot server
 
   - name: copy init script to target host
-    copy: src=./backup_files/{{inventory_hostname}}/init.sh dest=/root/init.sh
+    copy: src=./configs/{{inventory_hostname}}/init.sh dest=/root/init.sh
 
   - name: run init script
     command: bash /root/init.sh
 
   - name: Restore FRR daemons
-    copy: src=./backup_files/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
+    copy: src=./configs/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
     notify: restart frr
 
   - name: Restore FRR configs
-    copy: src=./backup_files/{{inventory_hostname}}/frr.conf dest=/etc/frr/frr.conf
+    copy: src=./configs/{{inventory_hostname}}/frr.conf dest=/etc/frr/frr.conf
     notify: restart frr
 
 
