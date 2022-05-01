@@ -374,5 +374,27 @@
         "DATABASE": {
             "VERSION": "version_1_0_3"
         }
+    },
+    "VLAN": {
+        "Vlan101": {
+            "members": [
+                "Ethernet40",
+                "Ethernet44"
+            ],
+            "vlanid": "101"
+        }
+    },
+    "VLAN_INTERFACE": {
+        "Vlan101": {},
+        "Vlan101|10.0.101.1/24": {}
+    },
+    "VLAN_MEMBER": {
+        "Vlan101|Ethernet40": {
+            "tagging_mode": "untagged"
+        },
+        "Vlan101|Ethernet44": {
+            "tagging_mode": "untagged"
+        }
     }
+
 }
