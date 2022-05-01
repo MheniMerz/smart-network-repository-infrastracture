@@ -40,25 +40,6 @@ graph multiverse_network {
    "server02" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.82" nic_model="e1000" memory="1024"]
    "server03" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.83" nic_model="e1000" memory="1024"]
    "server04" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.84" nic_model="e1000" memory="1024"]
-   "server05" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.85" nic_model="e1000" memory="1024"]
-   "server06" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.86" nic_model="e1000" memory="1024"]
-   "server07" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.87" nic_model="e1000" memory="1024"]
-   "server08" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.88" nic_model="e1000" memory="1024"]
-   "server09" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.89" nic_model="e1000" memory="1024"]
-   "server10" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.90" nic_model="e1000" memory="1024"]
-   "server11" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.91" nic_model="e1000" memory="1024"]
-   "server12" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.92" nic_model="e1000" memory="1024"]
-   "server13" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.93" nic_model="e1000" memory="1024"]
-   "server14" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.94" nic_model="e1000" memory="1024"]
-   "server15" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.95" nic_model="e1000" memory="1024"]
-   "server16" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.96" nic_model="e1000" memory="1024"]
-   "server17" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.97" nic_model="e1000" memory="1024"]
-   "server18" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.98" nic_model="e1000" memory="1024"]
-   "server19" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.99" nic_model="e1000" memory="1024"]
-   "server20" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.100" nic_model="e1000" memory="1024"]
-   "server21" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.101" nic_model="e1000" memory="1024"]
-   "server22" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.102" nic_model="e1000" memory="1024"]
-
 
    "spine01":"swp1" -- "leaf01":"swp1"
    "spine02":"swp1" -- "leaf01":"swp2"
