@@ -322,25 +322,25 @@
     },
     "INTERFACE": {
         "Ethernet0": {},
+        "Ethernet1": {},
+        "Ethernet2": {},
+        "Ethernet3": {},
         "Ethernet4": {},
+        "Ethernet5": {},
+        "Ethernet6": {},
+        "Ethernet7": {},
         "Ethernet8": {},
+        "Ethernet9": {},
+        "Ethernet10": {},
+        "Ethernet11": {},
         "Ethernet12": {},
+        "Ethernet13": {},
+        "Ethernet14": {},
+        "Ethernet15": {},
         "Ethernet16": {},
-        "Ethernet20": {},
-        "Ethernet24": {},
-        "Ethernet28": {},
-        "Ethernet32": {},
-        "Ethernet36": {},
-        "Ethernet40": {},
-        "Ethernet44": {},
-        "Ethernet48": {},
-        "Ethernet52": {},
-        "Ethernet56": {},
-        "Ethernet60": {},
-        "Ethernet64": {},
-        "Ethernet68": {},
-        "Ethernet72": {},
-        "Ethernet76": {},
+        "Ethernet17": {},
+        "Ethernet18": {},
+        "Ethernet19": {},
         "Ethernet0|172.0.1.0/31": {},
         "Ethernet4|172.0.1.2/31": {},
         "Ethernet8|172.0.1.4/31": {},
@@ -375,7 +375,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet4": {
+        "Ethernet1": {
             "admin_status": "up",
             "alias": "fortyGigE0/4",
             "index": "1",
@@ -383,7 +383,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet8": {
+        "Ethernet2": {
             "admin_status": "up",
             "alias": "fortyGigE0/8",
             "index": "2",
@@ -391,7 +391,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet12": {
+        "Ethernet3": {
             "admin_status": "up",
             "alias": "fortyGigE0/12",
             "index": "3",
@@ -399,7 +399,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet16": {
+        "Ethernet4": {
             "admin_status": "up",
             "alias": "fortyGigE0/16",
             "index": "4",
@@ -407,7 +407,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet20": {
+        "Ethernet5": {
             "admin_status": "up",
             "alias": "fortyGigE0/20",
             "index": "5",
@@ -415,7 +415,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet24": {
+        "Ethernet6": {
             "admin_status": "up",
             "alias": "fortyGigE0/24",
             "index": "6",
@@ -423,7 +423,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet28": {
+        "Ethernet7": {
             "admin_status": "up",
             "alias": "fortyGigE0/28",
             "index": "7",
@@ -431,7 +431,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet32": {
+        "Ethernet8": {
             "admin_status": "up",
             "alias": "fortyGigE0/32",
             "index": "8",
@@ -439,7 +439,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet36": {
+        "Ethernet9": {
             "admin_status": "up",
             "alias": "fortyGigE0/36",
             "index": "9",
@@ -447,7 +447,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet40": {
+        "Ethernet10": {
             "admin_status": "up",
             "alias": "fortyGigE0/40",
             "index": "10",
@@ -455,7 +455,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet44": {
+        "Ethernet11": {
             "admin_status": "up",
             "alias": "fortyGigE0/44",
             "index": "11",
@@ -463,7 +463,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet48": {
+        "Ethernet12": {
             "admin_status": "up",
             "alias": "fortyGigE0/48",
             "index": "12",
@@ -471,7 +471,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet52": {
+        "Ethernet13": {
             "admin_status": "up",
             "alias": "fortyGigE0/52",
             "index": "12",
@@ -479,7 +479,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet56": {
+        "Ethernet14": {
             "admin_status": "up",
             "alias": "fortyGigE0/56",
             "index": "12",
@@ -487,7 +487,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet60": {
+        "Ethernet15": {
             "admin_status": "up",
             "alias": "fortyGigE0/60",
             "index": "12",
@@ -495,7 +495,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet64": {
+        "Ethernet16": {
             "admin_status": "up",
             "alias": "fortyGigE0/64",
             "index": "12",
@@ -503,7 +503,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet68": {
+        "Ethernet17": {
             "admin_status": "up",
             "alias": "fortyGigE0/68",
             "index": "12",
@@ -511,7 +511,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet72": {
+        "Ethernet18": {
             "admin_status": "up",
             "alias": "fortyGigE0/72",
             "index": "12",
@@ -519,7 +519,7 @@
             "mtu": "9216",
             "speed": "40000"
         },
-        "Ethernet76": {
+        "Ethernet19": {
             "admin_status": "up",
             "alias": "fortyGigE0/76",
             "index": "12",
