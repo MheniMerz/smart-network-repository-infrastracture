@@ -32,7 +32,7 @@ leaf12 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 leaf13 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 
 [server]
-server01
-server02
-server03
-server04
+server01 ansible_user=ubuntu ansible_ssh_pass=nvidia
+server02 ansible_user=ubuntu ansible_ssh_pass=nvidia
+server03 ansible_user=ubuntu ansible_ssh_pass=nvidia
+server04 ansible_user=ubuntu ansible_ssh_pass=nvidia
