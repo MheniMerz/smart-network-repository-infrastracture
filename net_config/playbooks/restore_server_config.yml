@@ -51,6 +51,16 @@
   - name: run init script
     command: bash /root/init.sh
 
+  - name: copy generate_traffic script to target host
+    copy: src=./configs/{{inventory_hostname}}/generate_traffic.sh dest=/root/generate_traffic.sh
+
+  - name: generate traffic periodically with cronjob
+    cron: minute="3" hour="*" day="*" month="*" weekday="*"
+          name="send icmp traffic to all leaf nodes every 3 minutes"
+          cron_file="generate_traffic"
+          user="root"
+          job="/root/generate_traffic.sh"
+
   - name: Restore FRR daemons
     copy: src=./configs/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
     notify: restart frr
