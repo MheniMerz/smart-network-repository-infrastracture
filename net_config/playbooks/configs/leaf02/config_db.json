@@ -374,5 +374,45 @@
         "DATABASE": {
             "VERSION": "version_1_0_3"
         }
+    },
+    "VLAN": {
+        "Vlan21": {
+            "members": [
+                "Ethernet40"
+            ],
+            "vlanid": "21"
+        },
+        "Vlan22": {
+            "members": [
+                "Ethernet44"
+            ],
+            "vlanid": "22"
+        },
+        "Vlan23": {
+            "members": [
+                "Ethernet48"
+            ],
+            "vlanid": "23"
+        }
+    },
+    "VLAN_INTERFACE": {
+        "Vlan21": {},
+        "Vlan21|10.0.21.1/24": {},
+        "Vlan22": {},
+        "Vlan22|10.0.22.1/24": {},
+        "Vlan23": {},
+        "Vlan23|10.0.23.1/24": {}
+    },
+    "VLAN_MEMBER": {
+        "Vlan21|Ethernet40": {
+            "tagging_mode": "untagged"
+        },
+        "Vlan22|Ethernet44": {
+            "tagging_mode": "untagged"
+        },
+        "Vlan23|Ethernet48": {
+            "tagging_mode": "untagged"
+        }
     }
+
 }

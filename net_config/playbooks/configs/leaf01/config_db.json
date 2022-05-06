@@ -376,25 +376,42 @@
         }
     },
     "VLAN": {
-        "Vlan101": {
+        "Vlan11": {
             "members": [
-                "Ethernet40",
+                "Ethernet40"
+            ],
+            "vlanid": "11"
+        },
+        "Vlan12": {
+            "members": [
                 "Ethernet44"
             ],
-            "vlanid": "101"
+            "vlanid": "12"
+        },
+        "Vlan13": {
+            "members": [
+                "Ethernet48"
+            ],
+            "vlanid": "13"
         }
     },
     "VLAN_INTERFACE": {
-        "Vlan101": {},
-        "Vlan101|10.0.101.1/24": {}
+        "Vlan11": {},
+        "Vlan11|10.0.11.1/24": {},
+        "Vlan12": {},
+        "Vlan12|10.0.12.1/24": {},
+        "Vlan13": {},
+        "Vlan13|10.0.13.1/24": {}
     },
     "VLAN_MEMBER": {
-        "Vlan101|Ethernet40": {
+        "Vlan11|Ethernet40": {
             "tagging_mode": "untagged"
         },
-        "Vlan101|Ethernet44": {
+        "Vlan12|Ethernet44": {
+            "tagging_mode": "untagged"
+        },
+        "Vlan13|Ethernet48": {
             "tagging_mode": "untagged"
         }
     }
-
 }
