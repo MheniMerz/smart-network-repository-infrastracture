@@ -41,16 +41,6 @@
         - frr-pythontools
       update_cache: yes
 
-  - name: Copy over interfaces template
-    copy: src=./configs/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
-    notify: reboot server
-
-  - name: copy init script to target host
-    copy: src=./configs/{{inventory_hostname}}/init.sh dest=/root/init.sh
-
-  - name: run init script
-    command: bash /root/init.sh
-
   - name: copy generate_traffic script to target host
     copy: src=./configs/{{inventory_hostname}}/generate_traffic.sh dest=/root/generate_traffic.sh
 
@@ -60,6 +50,16 @@
           cron_file="generate_traffic"
           user="root"
           job="/root/generate_traffic.sh"
+
+  - name: Copy over interfaces template
+    copy: src=./configs/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
+    notify: reboot server
+
+  - name: copy init script to target host
+    copy: src=./configs/{{inventory_hostname}}/init.sh dest=/root/init.sh
+
+  - name: run init script
+    command: bash /root/init.sh
 
   - name: Restore FRR daemons
     copy: src=./configs/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
