@@ -46,3 +46,9 @@
   
   - name: set mac addresses 
     command: bash /root/set_mac_addresses.sh
+  
+  - name: copy bgp_redistribute_connected_script to target host 
+    copy: src=./configs/{{inventory_hostname}}/bgp_redistribute_connected.sh dest=/root/bgp_redistribute_connected.sh
+  
+  - name: BGP redistribute connected routes
+    command: bash /root/bgp_redistribute_connected.sh
