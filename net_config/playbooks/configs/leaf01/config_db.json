@@ -413,5 +413,51 @@
         "Vlan13|Ethernet48": {
             "tagging_mode": "untagged"
         }
+    },
+    "ACL_TABLE": {
+        "SNMP_ACL": {
+            "services": [
+                "SNMP"
+            ],
+            "type": "CTRLPLANE",
+            "policy_desc": "SNMP_ACL"
+        },
+        "SSH_ONLY": {
+            "services": [
+                "SSH"
+            ],
+            "type": "CTRLPLANE",
+            "policy_desc": "SSH_ONLY"
+        }
+    },
+    "ACL_RULE": {
+        "SNMP_ACL|DEFAULT_RULE": {
+            "PRIORITY": "1",
+            "PACKET_ACTION": "DROP",
+            "ETHER_TYPE": "2048"
+        },
+        "SNMP_ACL|RULE_1": {
+            "PRIORITY": "9999",
+            "PACKET_ACTION": "ACCEPT",
+            "SRC_IP": "10.0.11.101/32",
+            "IP_PROTOCOL": "17"
+        },
+        "SNMP_ACL|RULE_2": {
+            "PRIORITY": "9998",
+            "PACKET_ACTION": "ACCEPT",
+            "SRC_IP": "10.0.131.101/32",
+            "IP_PROTOCOL": "17"
+        },
+        "SSH_ONLY|DEFAULT_RULE": {
+            "PRIORITY": "1",
+            "PACKET_ACTION": "DROP",
+            "ETHER_TYPE": "2048"
+        },
+        "SSH_ONLY|RULE_1": {
+            "PRIORITY": "9999",
+            "PACKET_ACTION": "ACCEPT",
+            "SRC_IP": "10.0.11.101/8",
+            "IP_PROTOCOL": "6"
+        }
     }
 }
