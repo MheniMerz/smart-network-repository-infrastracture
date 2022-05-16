@@ -51,9 +51,9 @@
           user="root"
           job="/root/generate_traffic.sh"
 
-  - name: Copy over interfaces template
+  - name: Copy interfaces template
     copy: src=./configs/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
-    notify: reboot server
+    notify: rerstart networking service
 
   - name: copy init script to target host
     copy: src=./configs/{{inventory_hostname}}/init.sh dest=/root/init.sh
@@ -71,10 +71,10 @@
 
 
   handlers:
-  - name: reboot server
-    reboot:
-      reboot_timeout: 1200
-      test_command: pwd
+  - name: rerstart networking service
+    service:
+      name: networking
+      state: restarted
 
   - name: restart frr
     service:
