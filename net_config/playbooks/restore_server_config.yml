@@ -53,7 +53,11 @@
 
   - name: Copy interfaces template
     copy: src=./configs/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
-    notify: rerstart networking service
+
+  - name: rerstart networking service
+    service:
+      name: networking
+      state: restarted
 
   - name: copy init script to target host
     copy: src=./configs/{{inventory_hostname}}/init.sh dest=/root/init.sh
@@ -70,12 +74,6 @@
 
 
   handlers:
-  - name: rerstart networking service
-    service:
-      name: networking
-      state: restarted
-    listen: rerstart networking service
-
   - name: restart frr
     service:
       name: frr
