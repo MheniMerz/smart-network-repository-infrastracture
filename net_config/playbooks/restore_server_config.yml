@@ -63,7 +63,6 @@
 
   - name: Restore FRR daemons
     copy: src=./configs/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
-    notify: restart frr
 
   - name: Restore FRR configs
     copy: src=./configs/{{inventory_hostname}}/frr.conf dest=/etc/frr/frr.conf
@@ -75,8 +74,10 @@
     service:
       name: networking
       state: restarted
+    listen: rerstart networking service
 
   - name: restart frr
     service:
       name: frr
       state: restarted
+    listen: restart frr
