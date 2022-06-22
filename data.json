@@ -1276,7 +1276,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -1286,7 +1286,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -1296,7 +1296,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -1306,7 +1306,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -3447,7 +3447,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -3457,7 +3457,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -3467,7 +3467,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -3477,7 +3477,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -5618,7 +5618,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -5628,7 +5628,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -5638,7 +5638,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -5648,7 +5648,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -7777,7 +7777,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -7787,7 +7787,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -7797,7 +7797,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -7807,7 +7807,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -9942,7 +9942,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -9952,7 +9952,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -9962,7 +9962,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -9972,7 +9972,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -12107,7 +12107,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -12117,7 +12117,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -12127,7 +12127,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -12137,7 +12137,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -14278,7 +14278,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -14288,7 +14288,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -14298,7 +14298,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -14308,7 +14308,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -16443,7 +16443,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -16453,7 +16453,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -16463,7 +16463,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -16473,7 +16473,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -18602,7 +18602,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -18612,7 +18612,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -18622,7 +18622,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -18632,7 +18632,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -20779,7 +20779,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -20789,7 +20789,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -20799,7 +20799,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -20809,7 +20809,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -23352,7 +23352,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -23362,7 +23362,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -23372,7 +23372,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -23382,7 +23382,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -26030,7 +26030,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -26040,7 +26040,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -26050,7 +26050,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -26060,7 +26060,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -28732,7 +28732,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -28742,7 +28742,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -28752,7 +28752,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -28762,7 +28762,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -31410,7 +31410,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -31420,7 +31420,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -31430,7 +31430,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -31440,7 +31440,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -34088,7 +34088,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -34098,7 +34098,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -34108,7 +34108,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -34118,7 +34118,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -36766,7 +36766,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -36776,7 +36776,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -36786,7 +36786,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -36796,7 +36796,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -39450,7 +39450,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -39460,7 +39460,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -39470,7 +39470,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -39480,7 +39480,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -42128,7 +42128,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -42138,7 +42138,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -42148,7 +42148,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -42158,7 +42158,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -44806,7 +44806,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -44816,7 +44816,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -44826,7 +44826,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -44836,7 +44836,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -47496,7 +47496,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -47506,7 +47506,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -47516,7 +47516,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -47526,7 +47526,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -50180,7 +50180,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -50190,7 +50190,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -50200,7 +50200,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -50210,7 +50210,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -52864,7 +52864,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -52874,7 +52874,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -52884,7 +52884,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
@@ -52894,7 +52894,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -55566,7 +55566,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 10.0.11.101/32"
@@ -55576,7 +55576,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_1",
                 "PRIORITY": "9999",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.11.101/32"
@@ -55586,7 +55586,7 @@
                 "TABLE": "SNMP_ACL",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 17",
                     "SRC_IP: 10.0.131.101/32"
@@ -55596,7 +55596,7 @@
                 "TABLE": "SSH_ONLY",
                 "RULE": "RULE_2",
                 "PRIORITY": "9998",
-                "ACTION": "FORWARD",
+                "ACTION": "ACCEPT",
                 "MATCH": [
                     "IP_PROTOCOL: 6",
                     "SRC_IP: 192.168.200.1/32"
