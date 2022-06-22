@@ -562,13 +562,13 @@
         },
         "SNMP_ACL|RULE_1": {
             "PRIORITY": "9999",
-            "PACKET_ACTION": "ACCEPT",
+            "PACKET_ACTION": "FORWARD",
             "SRC_IP": "10.0.11.101/32",
             "IP_PROTOCOL": "17"
         },
         "SNMP_ACL|RULE_2": {
             "PRIORITY": "9998",
-            "PACKET_ACTION": "ACCEPT",
+            "PACKET_ACTION": "FORWARD",
             "SRC_IP": "10.0.131.101/32",
             "IP_PROTOCOL": "17"
         },
@@ -579,13 +579,13 @@
         },
         "SSH_ONLY|RULE_1": {
             "PRIORITY": "9999",
-            "PACKET_ACTION": "ACCEPT",
+            "PACKET_ACTION": "FORWARD",
             "SRC_IP": "10.0.11.101/32",
             "IP_PROTOCOL": "6"
         },
         "SSH_ONLY|RULE_2": {
             "PRIORITY": "9998",
-            "PACKET_ACTION": "ACCEPT",
+            "PACKET_ACTION": "FORWARD",
             "SRC_IP": "192.168.200.1/32",
             "IP_PROTOCOL": "6"
         }
