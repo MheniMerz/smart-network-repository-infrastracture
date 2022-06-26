@@ -45,7 +45,7 @@
     copy: src=./configs/{{inventory_hostname}}/generate_traffic.sh dest=/root/generate_traffic.sh
 
   - name: generate traffic periodically with cronjob
-    cron: minute="3" hour="*" day="*" month="*" weekday="*"
+    cron: minute="*/3" hour="*" day="*" month="*" weekday="*"
           name="send icmp traffic to all leaf nodes every 3 minutes"
           cron_file="generate_traffic"
           user="root"
