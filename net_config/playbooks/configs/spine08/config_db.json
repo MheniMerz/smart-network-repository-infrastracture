@@ -518,6 +518,20 @@
             "IP_PROTOCOL": "6"
         }
     },
+    "SFLOW_COLLECTOR": {
+        "collector1": {
+            "collector_ip": "192.168.200.1",
+            "collector_port": "6343",
+            "collector_vrf": "default"
+        }
+    },
+    "SFLOW": {
+        "global": {
+            "admin_state": "up",
+            "polling_interval": "20",
+            "agent_id": "eth0"
+        }
+    },
     "SFLOW_SESSION": {
         "Ethernet0": {
             "admin_state": "up",
