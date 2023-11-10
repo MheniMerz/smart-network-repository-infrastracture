@@ -3,6 +3,10 @@
   become: true
   gather_facts: false
   tasks:
+  - name: Delete unverified cumulus apt source
+    ansible.builtin.file:
+      state: absent
+      path: /etc/apt/sources.list.d/apps3_cumulusnetworks_com_repos_deb.list
   - name: install ifupdown
     apt:
       name: ifupdown
