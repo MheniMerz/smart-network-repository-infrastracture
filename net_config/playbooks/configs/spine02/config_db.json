@@ -573,5 +573,8 @@
             "admin_state": "up",
             "sample_rate": "40"
         }
+    },
+    "SYSLOG_SERVER": {
+        "192.168.200.1": {}
     }
 }
