@@ -30,34 +30,9 @@ leaf10 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 leaf11 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 leaf12 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 leaf13 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf14 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf15 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf16 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf17 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf18 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf19 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
-leaf20 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 
 [server]
-server01
-server02
-server03
-server04
-server05
-server06
-server07
-server08
-server09
-server10
-server11
-server12
-server13
-server14
-server15
-server16
-server17
-server18
-server19
-server20
-server21
-server22
+server01 ansible_user=ubuntu ansible_ssh_pass=nvidia
+server02 ansible_user=ubuntu ansible_ssh_pass=nvidia
+server03 ansible_user=ubuntu ansible_ssh_pass=nvidia
+server04 ansible_user=ubuntu ansible_ssh_pass=nvidia

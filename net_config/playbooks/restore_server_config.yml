@@ -3,6 +3,10 @@
   become: true
   gather_facts: false
   tasks:
+  - name: Delete unverified cumulus apt source
+    ansible.builtin.file:
+      state: absent
+      path: /etc/apt/sources.list.d/apps3_cumulusnetworks_com_repos_deb.list
   - name: install ifupdown
     apt:
       name: ifupdown
@@ -41,9 +45,18 @@
         - frr-pythontools
       update_cache: yes
 
-  - name: Copy over interfaces template
+  - name: copy generate_traffic script to target host
+    copy: src=./configs/{{inventory_hostname}}/generate_traffic.sh dest=/root/generate_traffic.sh
+
+  - name: generate traffic periodically with cronjob
+    cron: minute="*/3" hour="*" day="*" month="*" weekday="*"
+          name="send icmp traffic to all leaf nodes every 3 minutes"
+          cron_file="generate_traffic"
+          user="root"
+          job="bash /root/generate_traffic.sh"
+
+  - name: Copy interfaces template
     copy: src=./configs/{{inventory_hostname}}/interfaces dest=/etc/network/interfaces
-    notify: reboot server
 
   - name: copy init script to target host
     copy: src=./configs/{{inventory_hostname}}/init.sh dest=/root/init.sh
@@ -53,7 +66,6 @@
 
   - name: Restore FRR daemons
     copy: src=./configs/{{inventory_hostname}}/daemons dest=/etc/frr/daemons
-    notify: restart frr
 
   - name: Restore FRR configs
     copy: src=./configs/{{inventory_hostname}}/frr.conf dest=/etc/frr/frr.conf
@@ -61,12 +73,8 @@
 
 
   handlers:
-  - name: reboot server
-    reboot:
-      reboot_timeout: 1200
-      test_command: pwd
-
   - name: restart frr
     service:
       name: frr
       state: restarted
+    listen: restart frr
