@@ -1,6 +1,5 @@
 graph multiverse_network {
    
-   "dummy" [function="fake"]
    "oob-mgmt-server"  [function="oob-server" mgmt_ip="192.168.200.1" cpu="4" memory="2048"]
    "oob-mgmt-switch"  [function="oob-switch" mgmt_ip="192.168.200.251" ports="64"]
 
@@ -16,8 +15,8 @@ graph multiverse_network {
   
    "fw1" [function="leaf" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="54"]
    "fw2" [function="leaf" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.12" ports="54"]
-   "border01" [function="exit" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="54"]
-   "border02" [function="exit" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.32" ports="54"]
+   "border01" [function="leaf" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="54"]
+   "border02" [function="leaf" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.32" ports="54"]
 
    "server01" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.81" nic_model="e1000" memory="1024"]
    "server02" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.82" nic_model="e1000" memory="1024"]
@@ -81,22 +80,19 @@ graph multiverse_network {
    "border02":"swp2" -- "server08":"eth2"
    "border02":"swp3" -- "fw1":"swp2"
    "border02":"swp4" -- "fw2":"swp2"
-
-   "oob-mgmt-server":"eth0" -- "dummy":"outbound"
-   "fw1":"swp49" -- "dummy":"outbound-fw1"
-   "fw2":"swp49" -- "dummy":"outbound-fw2"
-
    
+   "oob-mgmt-server":"eth1" -- "oob-mgmt-switch":"swp1"
+
    "spine01":"eth0" -- "oob-mgmt-switch":"swp2" [left_mac="44:38:50:22:01:01"]
    "spine02":"eth0" -- "oob-mgmt-switch":"swp3" [left_mac="44:38:50:22:01:02"]
    "spine03":"eth0" -- "oob-mgmt-switch":"swp4" [left_mac="44:38:50:22:01:03"]
    "spine04":"eth0" -- "oob-mgmt-switch":"swp5" [left_mac="44:38:50:22:01:04"]
   
-   "fw1":"eth0" -- "oob-mgmt-switch":"swp6" [left_mac="44:38:39:00:01:8c"]
-   "fw2":"eth0" -- "oob-mgmt-switch":"swp7" [left_mac="44:38:39:00:01:8e"]
+   "fw1":"eth0" -- "oob-mgmt-switch":"swp6" [left_mac="44:38:10:22:01:01"]
+   "fw2":"eth0" -- "oob-mgmt-switch":"swp7" [left_mac="44:38:10:22:01:02"]
    
-   "border01":"eth0" -- "oob-mgmt-switch":"swp8" [left_mac="44:38:39:00:01:74"]
-   "border02":"eth0" -- "oob-mgmt-switch":"swp9" [left_mac="44:38:39:00:01:7c"]
+   "border01":"eth0" -- "oob-mgmt-switch":"swp8" [left_mac="44:38:20:22:01:01"]
+   "border02":"eth0" -- "oob-mgmt-switch":"swp9" [left_mac="44:38:20:22:01:02"]
 
    "leaf01":"eth0" -- "oob-mgmt-switch":"swp11" [left_mac="44:38:40:22:01:01"]
    "leaf02":"eth0" -- "oob-mgmt-switch":"swp12" [left_mac="44:38:40:22:01:02"]
