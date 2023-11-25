@@ -8,209 +8,107 @@ graph multiverse_network {
    "spine02" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.22" ports="32"]
    "spine03" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.23" ports="32"]
    "spine04" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.24" ports="32"]
-   "spine05" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.25" ports="32"]
-   "spine06" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.26" ports="32"]
-   "spine07" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.27" ports="32"]
-   "spine08" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.28" ports="32"]
-   "spine09" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.29" ports="32"]
-   "spine10" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.30" ports="32"]
    
    "leaf01" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.41" ports="54"]
    "leaf02" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.42" ports="54"]
    "leaf03" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.43" ports="54"]
    "leaf04" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.44" ports="54"]
-   "leaf05" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.45" ports="54"]
-   "leaf06" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.46" ports="54"]
-   "leaf07" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.47" ports="54"]
-   "leaf08" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.48" ports="54"]
-   "leaf09" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.49" ports="54"]
-   "leaf10" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.50" ports="54"]
-   "leaf11" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.51" ports="54"]
-   "leaf12" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.52" ports="54"]
-   "leaf13" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.53" ports="54"]
-   
+  
+   "fw1" [function="leaf" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="54"]
+   "fw2" [function="leaf" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.12" ports="54"]
+   "border01" [function="exit" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="54"]
+   "border02" [function="exit" os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.32" ports="54"]
+
    "server01" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.81" nic_model="e1000" memory="1024"]
    "server02" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.82" nic_model="e1000" memory="1024"]
    "server03" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.83" nic_model="e1000" memory="1024"]
    "server04" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.84" nic_model="e1000" memory="1024"]
+   "server05" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.85" nic_model="e1000" memory="1024"]
+   "server06" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.86" nic_model="e1000" memory="1024"]
+   "server07" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.87" nic_model="e1000" memory="1024"]
+   "server08" [function="host" os="generic/ubuntu1804" mgmt_ip="192.168.200.88" nic_model="e1000" memory="1024"]
 
-   "spine01":"swp1" -- "leaf01":"swp1"
-   "spine02":"swp1" -- "leaf01":"swp2"
-   "spine03":"swp1" -- "leaf01":"swp3"
-   "spine04":"swp1" -- "leaf01":"swp4"
-   "spine05":"swp1" -- "leaf01":"swp5"
-   "spine06":"swp1" -- "leaf01":"swp6"
-   "spine07":"swp1" -- "leaf01":"swp7"
-   "spine08":"swp1" -- "leaf01":"swp8"
-   "spine09":"swp1" -- "leaf01":"swp9"
-   "spine10":"swp1" -- "leaf01":"swp10"
+   "leaf01":"swp1" -- "server01":"eth1"
+   "leaf01":"swp2" -- "server02":"eth1"
+   "leaf01":"swp3" -- "server03":"eth1"
+   "leaf02":"swp1" -- "server01":"eth2"
+   "leaf02":"swp2" -- "server02":"eth2"
+   "leaf02":"swp3" -- "server03":"eth2"
+   "leaf03":"swp1" -- "server04":"eth1"
+   "leaf03":"swp2" -- "server05":"eth1"
+   "leaf03":"swp3" -- "server06":"eth1"
+   "leaf04":"swp1" -- "server04":"eth2"
+   "leaf04":"swp2" -- "server05":"eth2"
+   "leaf04":"swp3" -- "server06":"eth2"
 
-   "spine01":"swp2" -- "leaf02":"swp1"
-   "spine02":"swp2" -- "leaf02":"swp2"
-   "spine03":"swp2" -- "leaf02":"swp3"
-   "spine04":"swp2" -- "leaf02":"swp4"
-   "spine05":"swp2" -- "leaf02":"swp5"
-   "spine06":"swp2" -- "leaf02":"swp6"
-   "spine07":"swp2" -- "leaf02":"swp7"
-   "spine08":"swp2" -- "leaf02":"swp8"
-   "spine09":"swp2" -- "leaf02":"swp9"
-   "spine10":"swp2" -- "leaf02":"swp10"
+   "leaf01":"swp49" -- "leaf02":"swp49"
+   "leaf01":"swp50" -- "leaf02":"swp50"
+   "leaf03":"swp49" -- "leaf04":"swp49"
+   "leaf03":"swp50" -- "leaf04":"swp50"
+   "border01":"swp49" -- "border02":"swp49"
+   "border01":"swp50" -- "border02":"swp50"
 
-   "spine01":"swp3" -- "leaf03":"swp1"
-   "spine02":"swp3" -- "leaf03":"swp2"
-   "spine03":"swp3" -- "leaf03":"swp3"
-   "spine04":"swp3" -- "leaf03":"swp4"
-   "spine05":"swp3" -- "leaf03":"swp5"
-   "spine06":"swp3" -- "leaf03":"swp6"
-   "spine07":"swp3" -- "leaf03":"swp7"
-   "spine08":"swp3" -- "leaf03":"swp8"
-   "spine09":"swp3" -- "leaf03":"swp9"
-   "spine10":"swp3" -- "leaf03":"swp10"
+   "spine01":"swp1" -- "leaf01":"swp51"
+   "spine02":"swp1" -- "leaf01":"swp52"
+   "spine03":"swp1" -- "leaf01":"swp53"
+   "spine04":"swp1" -- "leaf01":"swp54"
+   "spine01":"swp2" -- "leaf02":"swp51"
+   "spine02":"swp2" -- "leaf02":"swp52"
+   "spine03":"swp2" -- "leaf02":"swp53"
+   "spine04":"swp2" -- "leaf02":"swp54"
+   "spine01":"swp3" -- "leaf03":"swp51"
+   "spine02":"swp3" -- "leaf03":"swp52"
+   "spine03":"swp3" -- "leaf03":"swp53"
+   "spine04":"swp3" -- "leaf03":"swp54"
+   "spine01":"swp4" -- "leaf04":"swp51"
+   "spine02":"swp4" -- "leaf04":"swp52"
+   "spine03":"swp4" -- "leaf04":"swp53"
+   "spine04":"swp4" -- "leaf04":"swp54"
+   "spine01":"swp5" -- "border01":"swp51"
+   "spine02":"swp5" -- "border01":"swp52"
+   "spine03":"swp5" -- "border01":"swp53"
+   "spine04":"swp5" -- "border01":"swp54"
+   "spine01":"swp6" -- "border02":"swp51"
+   "spine02":"swp6" -- "border02":"swp52"
+   "spine03":"swp6" -- "border02":"swp53"
+   "spine04":"swp6" -- "border02":"swp54"
 
-   "spine01":"swp4" -- "leaf04":"swp1"
-   "spine02":"swp4" -- "leaf04":"swp2"
-   "spine03":"swp4" -- "leaf04":"swp3"
-   "spine04":"swp4" -- "leaf04":"swp4"
-   "spine05":"swp4" -- "leaf04":"swp5"
-   "spine06":"swp4" -- "leaf04":"swp6"
-   "spine07":"swp4" -- "leaf04":"swp7"
-   "spine08":"swp4" -- "leaf04":"swp8"
-   "spine09":"swp4" -- "leaf04":"swp9"
-   "spine10":"swp4" -- "leaf04":"swp10"
+   "border01":"swp1" -- "server07":"eth1"
+   "border01":"swp2" -- "server08":"eth1"
+   "border01":"swp3" -- "fw1":"swp1"
+   "border01":"swp4" -- "fw2":"swp1"
+   "border02":"swp1" -- "server07":"eth2"
+   "border02":"swp2" -- "server08":"eth2"
+   "border02":"swp3" -- "fw1":"swp2"
+   "border02":"swp4" -- "fw2":"swp2"
 
-   "spine01":"swp5" -- "leaf05":"swp1"
-   "spine02":"swp5" -- "leaf05":"swp2"
-   "spine03":"swp5" -- "leaf05":"swp3"
-   "spine04":"swp5" -- "leaf05":"swp4"
-   "spine05":"swp5" -- "leaf05":"swp5"
-   "spine06":"swp5" -- "leaf05":"swp6"
-   "spine07":"swp5" -- "leaf05":"swp7"
-   "spine08":"swp5" -- "leaf05":"swp8"
-   "spine09":"swp5" -- "leaf05":"swp9"
-   "spine10":"swp5" -- "leaf05":"swp10"
+   "oob-mgmt-server":"eth0" -- "dummy":"outbound"
+   "fw1":"swp49" -- "dummy":"outbound-fw1"
+   "fw2":"swp49" -- "dummy":"outbound-fw2"
 
-   "spine01":"swp6" -- "leaf06":"swp1"
-   "spine02":"swp6" -- "leaf06":"swp2"
-   "spine03":"swp6" -- "leaf06":"swp3"
-   "spine04":"swp6" -- "leaf06":"swp4"
-   "spine05":"swp6" -- "leaf06":"swp5"
-   "spine06":"swp6" -- "leaf06":"swp6"
-   "spine07":"swp6" -- "leaf06":"swp7"
-   "spine08":"swp6" -- "leaf06":"swp8"
-   "spine09":"swp6" -- "leaf06":"swp9"
-   "spine10":"swp6" -- "leaf06":"swp10"
-
-   "spine01":"swp7" -- "leaf07":"swp1"
-   "spine02":"swp7" -- "leaf07":"swp2"
-   "spine03":"swp7" -- "leaf07":"swp3"
-   "spine04":"swp7" -- "leaf07":"swp4"
-   "spine05":"swp7" -- "leaf07":"swp5"
-   "spine06":"swp7" -- "leaf07":"swp6"
-   "spine07":"swp7" -- "leaf07":"swp7"
-   "spine08":"swp7" -- "leaf07":"swp8"
-   "spine09":"swp7" -- "leaf07":"swp9"
-   "spine10":"swp7" -- "leaf07":"swp10"
-
-   "spine01":"swp8" -- "leaf08":"swp1"
-   "spine02":"swp8" -- "leaf08":"swp2"
-   "spine03":"swp8" -- "leaf08":"swp3"
-   "spine04":"swp8" -- "leaf08":"swp4"
-   "spine05":"swp8" -- "leaf08":"swp5"
-   "spine06":"swp8" -- "leaf08":"swp6"
-   "spine07":"swp8" -- "leaf08":"swp7"
-   "spine08":"swp8" -- "leaf08":"swp8"
-   "spine09":"swp8" -- "leaf08":"swp9"
-   "spine10":"swp8" -- "leaf08":"swp10"
-
-   "spine01":"swp9" -- "leaf09":"swp1"
-   "spine02":"swp9" -- "leaf09":"swp2"
-   "spine03":"swp9" -- "leaf09":"swp3"
-   "spine04":"swp9" -- "leaf09":"swp4"
-   "spine05":"swp9" -- "leaf09":"swp5"
-   "spine06":"swp9" -- "leaf09":"swp6"
-   "spine07":"swp9" -- "leaf09":"swp7"
-   "spine08":"swp9" -- "leaf09":"swp8"
-   "spine09":"swp9" -- "leaf09":"swp9"
-   "spine10":"swp9" -- "leaf09":"swp10"
-
-   "spine01":"swp10" -- "leaf10":"swp1"
-   "spine02":"swp10" -- "leaf10":"swp2"
-   "spine03":"swp10" -- "leaf10":"swp3"
-   "spine04":"swp10" -- "leaf10":"swp4"
-   "spine05":"swp10" -- "leaf10":"swp5"
-   "spine06":"swp10" -- "leaf10":"swp6"
-   "spine07":"swp10" -- "leaf10":"swp7"
-   "spine08":"swp10" -- "leaf10":"swp8"
-   "spine09":"swp10" -- "leaf10":"swp9"
-   "spine10":"swp10" -- "leaf10":"swp10"
-
-   "spine01":"swp11" -- "leaf11":"swp1"
-   "spine02":"swp11" -- "leaf11":"swp2"
-   "spine03":"swp11" -- "leaf11":"swp3"
-   "spine04":"swp11" -- "leaf11":"swp4"
-   "spine05":"swp11" -- "leaf11":"swp5"
-   "spine06":"swp11" -- "leaf11":"swp6"
-   "spine07":"swp11" -- "leaf11":"swp7"
-   "spine08":"swp11" -- "leaf11":"swp8"
-   "spine09":"swp11" -- "leaf11":"swp9"
-   "spine10":"swp11" -- "leaf11":"swp10"
-
-   "spine01":"swp12" -- "leaf12":"swp1"
-   "spine02":"swp12" -- "leaf12":"swp2"
-   "spine03":"swp12" -- "leaf12":"swp3"
-   "spine04":"swp12" -- "leaf12":"swp4"
-   "spine05":"swp12" -- "leaf12":"swp5"
-   "spine06":"swp12" -- "leaf12":"swp6"
-   "spine07":"swp12" -- "leaf12":"swp7"
-   "spine08":"swp12" -- "leaf12":"swp8"
-   "spine09":"swp12" -- "leaf12":"swp9"
-   "spine10":"swp12" -- "leaf12":"swp10"
-
-   "spine01":"swp13" -- "leaf13":"swp1"
-   "spine02":"swp13" -- "leaf13":"swp2"
-   "spine03":"swp13" -- "leaf13":"swp3"
-   "spine04":"swp13" -- "leaf13":"swp4"
-   "spine05":"swp13" -- "leaf13":"swp5"
-   "spine06":"swp13" -- "leaf13":"swp6"
-   "spine07":"swp13" -- "leaf13":"swp7"
-   "spine08":"swp13" -- "leaf13":"swp8"
-   "spine09":"swp13" -- "leaf13":"swp9"
-   "spine10":"swp13" -- "leaf13":"swp10"
-
-   "leaf01":"swp11" -- "server01":"eth1"
-   "leaf01":"swp12" -- "server02":"eth1"
-   "leaf12":"swp11" -- "server03":"eth1"
-   "leaf13":"swp11" -- "server04":"eth1"
-
-   "oob-mgmt-server":"eth1" -- "oob-mgmt-switch":"swp1"
    
    "spine01":"eth0" -- "oob-mgmt-switch":"swp2" [left_mac="44:38:50:22:01:01"]
    "spine02":"eth0" -- "oob-mgmt-switch":"swp3" [left_mac="44:38:50:22:01:02"]
    "spine03":"eth0" -- "oob-mgmt-switch":"swp4" [left_mac="44:38:50:22:01:03"]
    "spine04":"eth0" -- "oob-mgmt-switch":"swp5" [left_mac="44:38:50:22:01:04"]
-   "spine05":"eth0" -- "oob-mgmt-switch":"swp6" [left_mac="44:38:50:22:01:05"]
-   "spine06":"eth0" -- "oob-mgmt-switch":"swp7" [left_mac="44:38:50:22:01:06"]
-   "spine07":"eth0" -- "oob-mgmt-switch":"swp8" [left_mac="44:38:50:22:01:07"]
-   "spine08":"eth0" -- "oob-mgmt-switch":"swp9" [left_mac="44:38:50:22:01:08"]
-   "spine09":"eth0" -- "oob-mgmt-switch":"swp10" [left_mac="44:38:50:22:01:09"]
-   "spine10":"eth0" -- "oob-mgmt-switch":"swp11" [left_mac="44:38:50:22:01:10"]
+  
+   "fw1":"eth0" -- "oob-mgmt-switch":"swp6" [left_mac="44:38:39:00:01:8c"]
+   "fw2":"eth0" -- "oob-mgmt-switch":"swp7" [left_mac="44:38:39:00:01:8e"]
    
-   "leaf01":"eth0" -- "oob-mgmt-switch":"swp12" [left_mac="44:38:40:22:01:01"]
-   "leaf02":"eth0" -- "oob-mgmt-switch":"swp13" [left_mac="44:38:40:22:01:02"]
-   "leaf03":"eth0" -- "oob-mgmt-switch":"swp14" [left_mac="44:38:40:22:01:03"]
-   "leaf04":"eth0" -- "oob-mgmt-switch":"swp15" [left_mac="44:38:40:22:01:04"]
-   "leaf05":"eth0" -- "oob-mgmt-switch":"swp16" [left_mac="44:38:40:22:01:05"]
-   "leaf06":"eth0" -- "oob-mgmt-switch":"swp17" [left_mac="44:38:40:22:01:06"]
-   "leaf07":"eth0" -- "oob-mgmt-switch":"swp18" [left_mac="44:38:40:22:01:07"]
-   "leaf08":"eth0" -- "oob-mgmt-switch":"swp19" [left_mac="44:38:40:22:01:08"]
-   "leaf09":"eth0" -- "oob-mgmt-switch":"swp20" [left_mac="44:38:40:22:01:09"]
-   "leaf10":"eth0" -- "oob-mgmt-switch":"swp21" [left_mac="44:38:40:22:01:10"]
-   "leaf11":"eth0" -- "oob-mgmt-switch":"swp22" [left_mac="44:38:40:22:01:11"]
-   "leaf12":"eth0" -- "oob-mgmt-switch":"swp23" [left_mac="44:38:40:22:01:12"]
-   "leaf13":"eth0" -- "oob-mgmt-switch":"swp24" [left_mac="44:38:40:22:01:13"]
+   "border01":"eth0" -- "oob-mgmt-switch":"swp8" [left_mac="44:38:39:00:01:74"]
+   "border02":"eth0" -- "oob-mgmt-switch":"swp9" [left_mac="44:38:39:00:01:7c"]
 
-   "server01":"eth0" -- "oob-mgmt-switch":"swp32" [left_mac="44:38:30:22:01:01"]
-   "server02":"eth0" -- "oob-mgmt-switch":"swp33" [left_mac="44:38:30:22:01:02"]
-   "server03":"eth0" -- "oob-mgmt-switch":"swp34" [left_mac="44:38:30:22:01:03"]
-   "server04":"eth0" -- "oob-mgmt-switch":"swp35" [left_mac="44:38:30:22:01:04"]
+   "leaf01":"eth0" -- "oob-mgmt-switch":"swp11" [left_mac="44:38:40:22:01:01"]
+   "leaf02":"eth0" -- "oob-mgmt-switch":"swp12" [left_mac="44:38:40:22:01:02"]
+   "leaf03":"eth0" -- "oob-mgmt-switch":"swp13" [left_mac="44:38:40:22:01:03"]
+   "leaf04":"eth0" -- "oob-mgmt-switch":"swp14" [left_mac="44:38:40:22:01:04"]
+
+   "server01":"eth0" -- "oob-mgmt-switch":"swp21" [left_mac="44:38:30:22:01:01"]
+   "server02":"eth0" -- "oob-mgmt-switch":"swp22" [left_mac="44:38:30:22:01:02"]
+   "server03":"eth0" -- "oob-mgmt-switch":"swp23" [left_mac="44:38:30:22:01:03"]
+   "server04":"eth0" -- "oob-mgmt-switch":"swp24" [left_mac="44:38:30:22:01:04"]
+   "server05":"eth0" -- "oob-mgmt-switch":"swp25" [left_mac="44:38:30:22:01:05"]
+   "server06":"eth0" -- "oob-mgmt-switch":"swp26" [left_mac="44:38:30:22:01:06"]
+   "server07":"eth0" -- "oob-mgmt-switch":"swp27" [left_mac="44:38:30:22:01:07"]
+   "server08":"eth0" -- "oob-mgmt-switch":"swp28" [left_mac="44:38:30:22:01:08"]
 }
