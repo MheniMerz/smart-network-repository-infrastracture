@@ -1,6 +1,6 @@
 graph multiverse_network {
    
-   "fake" [function="fake"]
+   "dummy" [function="fake"]
    "oob-mgmt-server"  [function="oob-server" mgmt_ip="192.168.200.1" cpu="4" memory="2048"]
    "oob-mgmt-switch"  [function="oob-switch" mgmt_ip="192.168.200.251" ports="64"]
 
